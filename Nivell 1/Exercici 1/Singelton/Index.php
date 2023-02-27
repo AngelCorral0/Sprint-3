@@ -2,8 +2,16 @@
 
 require "Tigger.php";
 
-$cosa1 = Tigger::getPepe();
-$cosa1->getPepe();
+$tigger = Tigger::getInstance();
+$tigger->getInstance();
+$tigger ->roar();
+$tigger->roar();
+$tigger ->roar();
+$tigger->roar();
+
+$tigger->getCounter();
+
+
 
 
 

@@ -2,24 +2,46 @@
 
 class Tigger {
  
-    private static  $pepe;
+    private static $instances = [];
+    private static $roarCount = 0;
 
      private function __construct() 
      {
-        echo "Building character...";
+        echo "Building character... <br>";
      }
+     
+     protected function __clone() { }
+
+     public function __wakeup()
+    {
+        throw new \Exception("Cannot unserialize a singleton.");
+    }
+
+    public static function getInstance() : Tigger
+    {
+        $cls = static::class;
+        if (!isset(self::$instances[$cls])) {
+            self::$instances[$cls] = new static();
+        }
+
+        return self::$instances[$cls];
+    }
 
     public function roar() {
-            echo "Grrr!";
+       
+        self::$roarCount++;
+        echo "Grrr!" . "<br>";
     }
 
-    public static function getPepe()
+    public function getCounter()
     {
-         if(!self::$pepe){
-                self::$pepe = new self();
-        }
-        return self::$pepe;
+        echo "Ha rugit:" . self::$roarCount . " vegades";
     }
+
+    
+
+
+    
 }
 
 
