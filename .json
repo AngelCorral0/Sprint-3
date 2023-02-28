@@ -1,0 +1,20 @@
+[
+    {
+    "nombre": "Cristiano",
+    "apellido": "Ronaldo",
+    "edad": 36,
+    "equipos": ["Sporting Club", "Manchester United", "Real Madrid", "Juventus"]
+    },
+    {
+        "nombre": "Leo",
+        "apellido": "Messi",
+        "edad": 34,
+        "equipos": ["Newell's Old Boys", "FC Barcelona", "PSG"]
+        },
+        {
+            "nombre": "Zlatan",
+            "apellido": "Ibrahimovic",
+            "edad": 36,
+            "equipos": ["Newell's Old Boys", "FC Barcelona", "PSG"]
+            }
+]
